@@ -221,7 +221,7 @@ Docusign::updateEnvelope($envelopeId, ['status' => 'sent']);
 #### Get Client
 
 ```php
-Docusign::getClient($envelopeId);
+Docusign::getClient();
 ```
 
 #### Download Envelope Documents Combined
