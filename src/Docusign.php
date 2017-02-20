@@ -125,6 +125,15 @@ class Docusign
         return $view = $this->rawJson($request);
     }
 
+    public function getClient(){
+        return $this->client;
+    }
+
+    public function downloadDocument($envelopeId){
+        $request = $this->client->get('envelopes/' . $envelopeId . '/documents/combined');
+        return $request->getBody();
+    }
+
     // Helper Functions
     public function rawJson($response)
     {

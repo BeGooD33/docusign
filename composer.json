@@ -9,12 +9,17 @@
             "name": "TJ Phippen",
             "email": "tj@tjphippen.com",
             "role": "Developer"
+        },
+        {
+            "name": "John DREYFUS",
+            "email": "john.dreyfus@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
         "php" : ">=5.4.0",
         "illuminate/support": "~5.1",
-        "guzzlehttp/guzzle": "~6.0",
+        "guzzlehttp/guzzle": "^6.1",
         "laravel/framework": "5.*"
     },
     "require-dev": {

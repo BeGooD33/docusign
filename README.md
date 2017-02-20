@@ -87,7 +87,7 @@ Docusign::getFolders(true);  // Will return normal folders plus template folders
 ```php
 Docusign::getFolderEnvelopes($folderId);
 ```
-See: [All Parameters](https://www.docusign.com/p/RESTAPIGuide/RESTAPIGuide.htm#REST%20API%20References/Get%20Folder%20Envelope%20List.htm%3FTocPath%3DREST%2520API%2520References%7C_____97) for this method.
+See: [All Parameters](https://docs.docusign.com/esign/restapi/Folders/Folders/) for this method.
 ```php
 Docusign::getFolderEnvelopes($folderId, array(
    'start_position' => 1, // Integer
@@ -105,7 +105,7 @@ Docusign::getFolderEnvelopes($folderId, array(
 ```php
 Docusign::getTemplates();
 ```
-Or with [Additional Parameters](https://www.docusign.com/p/RESTAPIGuide/RESTAPIGuide.htm#REST%20API%20References/Get%20List%20of%20Templates.htm%3FTocPath%3DREST%2520API%2520References%7C_____115).
+Or with [Additional Parameters](https://docs.docusign.com/esign/restapi/Templates/Templates/).
 ```php
 Docusign::getTemplates(array(
    'folder' => 1, // String (folder name or folder ID)
@@ -151,7 +151,7 @@ Docusign::getEnvelopeCustomFields($envelopeId);
 ```
 
 #### Get Tab Information for a Recipient
-See: [Tab Parameters](https://www.docusign.com/p/RESTAPIGuide/RESTAPIGuide.htm#REST%20API%20References/Tab%20Parameters.htm%3FTocPath%3DREST%2520API%2520References%7CSend%2520an%2520Envelope%2520or%2520Create%2520a%2520Draft%2520Envelope%7CTab%2520Parameters%7C_____0)
+See: [Tab Parameters](https://docs.docusign.com/esign/restapi/Envelopes/EnvelopeTabs/)
 
 
 ```php
@@ -160,7 +160,7 @@ Docusign::getEnvelopeTabs($envelopeId, $recipientId);
 
 #### Modify Tabs for a Recipient
 This one is a bit tricky. The `tabId` is required and must be within set of arrays.
-See: [Tab Types and Parameters] (https://www.docusign.com/p/RESTAPIGuide/RESTAPIGuide.htm#REST%20API%20References/Tab%20Parameters.htm)
+See: [Tab Types and Parameters] (https://docs.docusign.com/esign/restapi/Envelopes/EnvelopeTabs/)
 ```php
 $tabs = ['textTabs' => [['tabId' => '270269f6-4a84-4ff9-86db-2a572eb73d99', 'value' => '123 Fake Street']]];
 Docusign::updateRecipientTabs($envelopeId, $recipientId, $tabs);
@@ -169,7 +169,7 @@ Docusign::updateRecipientTabs($envelopeId, $recipientId, $tabs);
 #### Create/Send an Envelope from a Template
 
 
-See: [Send an Envelope or Create a Draft Envelope](https://www.docusign.com/p/RESTAPIGuide/RESTAPIGuide.htm#REST%20API%20References/Send%20an%20Envelope.htm%3FTocPath%3DREST%2520API%2520References%7CSend%2520an%2520Envelope%2520or%2520Create%2520a%2520Draft%2520Envelope%7C_____0) for full list of parameters/options.
+See: [Send an Envelope or Create a Draft Envelope](https://docs.docusign.com/esign/restapi/Envelopes/Envelopes/create/) for full list of parameters/options.
 
 ```php
 Docusign::createEnvelope(array(
@@ -200,7 +200,7 @@ Docusign::updateEnvelope($envelopeId, array(
 
 #### Post Recipient View
 
-Returns embeded signing URL. [Reference] (https://www.docusign.com/p/RESTAPIGuide/RESTAPIGuide.htm#REST%20API%20References/Post%20Recipient%20View.htm)
+Returns embeded signing URL. [Reference] (https://docs.docusign.com/esign/restapi/Envelopes/EnvelopeViews/createRecipient/)
 
 ```php
 Docusign::createRecipientView($envelopeId, array(
@@ -216,6 +216,20 @@ Docusign::createRecipientView($envelopeId, array(
 
 ```php
 Docusign::updateEnvelope($envelopeId, ['status' => 'sent']);
+```
+
+#### Get Client
+
+```php
+Docusign::getClient($envelopeId);
+```
+
+#### Download Envelope Documents Combined
+
+Return document body. Use "file_put_contents" function to create document.
+
+```php
+Docusign::downloadDocument($envelopeId);
 ```
 
 #### Void Envelope
