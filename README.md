@@ -13,8 +13,8 @@ Add the following to your `composer.json` file.
         {
             "type":"package",
             "package": {
-                "name": "BeGooD33/docusign",
-                "version":"master",
+                "name": "begood33/docusign",
+                "version":"dev-master",
                 "source": {
                     "url": "git@github.com:BeGooD33/docusign.git",
                     "type": "git",
@@ -24,7 +24,7 @@ Add the following to your `composer.json` file.
         }
     ],
 "require": {
-    "BeGooD33/docusign": "dev-master"
+    "begood33/docusign": "dev-master"
 },
 ~~~
 
@@ -34,7 +34,7 @@ You'll then need to register the service provider in your `config/app.php` file 
 
 ```php
 'providers' => array(
-    Tjphippen\Docusign\DocusignServiceProvider::class,
+    BeGooD33\Docusign\DocusignServiceProvider::class,
 )
 ```
 
@@ -43,7 +43,7 @@ If you have issues simply add it manually to your aliases array
 
 ```php
 'aliases' => array(
-    'Docusign'  => Tjphippen\Docusign\Facades\Docusign::class,
+    'Docusign'  => BeGooD33\Docusign\Facades\Docusign::class,
 )
 ```
 
