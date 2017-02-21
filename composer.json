@@ -1,5 +1,5 @@
 {
-    "name": "BeGooD33/docusign",
+    "name": "begood33/docusign",
     "description": "DocuSign Rest API Wrapper for Laravel 5",
     "keywords": ["laravel", "docusign", "laravel 5", "sign", "documents", "envelope"],
     "homepage": "https://github.com/BeGooD33/docusign",
