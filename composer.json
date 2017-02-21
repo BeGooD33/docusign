@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BeGooD33\\Docusign\\": "src/"
+            "BeGooD33\\Docusign\\": "vendors/begood33/docusign/src/"
         }
     },
     "repositories": [
