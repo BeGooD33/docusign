@@ -9,7 +9,23 @@
 Add the following to your `composer.json` file.
 
 ~~~
-"tjphippen/docusign": "0.3.*@dev"
+"repositories": [
+        {
+            "type":"package",
+            "package": {
+                "name": "BeGooD33/docusign",
+                "version":"master",
+                "source": {
+                    "url": "git@github.com:BeGooD33/docusign.git",
+                    "type": "git",
+                    "reference":"master"
+                }
+            }
+        }
+    ],
+"require": {
+    "BeGooD33/docusign": "dev-master"
+},
 ~~~
 
 Then run `composer install` or `composer update` to download and install.
