@@ -1,4 +1,4 @@
-<?php namespace Tjphippen\Docusign\Traits;
+<?php namespace BeGooD33\Docusign\Traits;
 
 use Docusign;
 use Illuminate\Support\Facades\Config;

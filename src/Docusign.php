@@ -1,4 +1,4 @@
-<?php namespace Tjphippen\Docusign;
+<?php namespace BeGooD33\Docusign;
 
 use GuzzleHttp\Client;
 

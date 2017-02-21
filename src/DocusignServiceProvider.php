@@ -1,4 +1,4 @@
-<?php namespace Tjphippen\Docusign;
+<?php namespace BeGooD33\Docusign;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
