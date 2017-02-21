@@ -10,19 +10,11 @@ Add the following to your `composer.json` file.
 
 ~~~
 "repositories": [
-        {
-            "type":"package",
-            "package": {
-                "name": "begood33/docusign",
-                "version":"dev-master",
-                "source": {
-                    "url": "git@github.com:BeGooD33/docusign.git",
-                    "type": "git",
-                    "reference":"master"
-                }
-            }
-        }
-    ],
+    {
+        "type": "vcs",
+        "url": "https://github.com/BeGooD33/docusign"
+    }
+],
 "require": {
     "begood33/docusign": "dev-master"
 },
